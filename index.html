@@ -590,8 +590,8 @@
 
         .action-buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
             margin-bottom: 20px;
         }
 
@@ -599,19 +599,25 @@
             background: var(--surface);
             border: 2px solid var(--border);
             color: var(--text);
-            padding: 14px;
+            padding: 12px 8px;
             border-radius: 12px;
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 700;
             cursor: pointer;
             font-family: 'DM Sans', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: all 0.2s ease;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 4px;
+            min-height: 60px;
+        }
+
+        .action-btn span {
+            font-size: 20px;
         }
 
         .action-btn:active {
@@ -790,7 +796,7 @@
 
         .metric-tabs {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
             margin-bottom: 16px;
         }
@@ -799,9 +805,9 @@
             background: var(--secondary);
             border: 2px solid var(--border);
             color: var(--text-secondary);
-            padding: 10px;
+            padding: 10px 6px;
             border-radius: 8px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             cursor: pointer;
             font-family: 'DM Sans', sans-serif;
@@ -878,7 +884,7 @@
     </div>
 
     <div class="container">
-        <div class="action-buttons" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <div class="action-buttons">
             <button class="action-btn" onclick="openAnalyticsModal()">
                 <span>📈</span>
                 Analytics
